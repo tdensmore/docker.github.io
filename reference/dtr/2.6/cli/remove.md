@@ -36,3 +36,10 @@ this operation.
 | `--ucp-url` | $UCP_URL | The UCP URL including domain and port. |
 | `--ucp-username` | $UCP_USERNAME | The UCP administrator username. |
 
+## Examples
+
+**Example 1**: to remove 2 DTR nodes from an existing 3 node DTR cluster: 
+`docker run -it --rm docker/dtr --existing-replica-id REPLICA_ID_TO_KEEP --replica-ids REPLICA_ID_TO_REMOVE,REPLICA_ID_TO_REMOVE `
+
+**Example 2**: to remove 2 DTR nodes from an existing 3 node DTR cluster with UCP that has certs enabled: 
+`docker run -it --rm docker/dtr --existing-replica-id REPLICA_ID_TO_KEEP --replica-ids REPLICA_ID_TO_REMOVE,REPLICA_ID_TO_REMOVE --ucp-ca CERT_FILE`
